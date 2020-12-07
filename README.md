@@ -60,10 +60,10 @@ Setup commands can be found in "router.txt"
 7. Create a twilio account and acquire a free api key. In mms.py enter your account sid, api key, and target phone number for notifications. 
 
 8. Configure IP tables to block all incoming traffic. A template is provided for blocking it all or allowing SSH and VNC. 
-    a. Block all incoming. 
+    1. Block all incoming. 
     `sudo iptables -A INPUT -i wlan0 -j DROP`
     `sudo iptables save`
-    b. Block all except for port 22 && 5800
+    1. Block all except for port 22 && 5800
     `sudo iptables -A INPUT -i wlan0 -p tcp --dport 22 -j ACCEPT`
     `sudo iptables -A INPUT -i wlan0 -p tcp --dport 5800 -j ACCEPT`
     `sudo iptables -A INPUT -i wlan0 -j DROP`

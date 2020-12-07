@@ -43,7 +43,7 @@ The current prototype will contain the following program design flow
 ## Setup (RPi #1)
 This Raspberry will act as the gateway and firewall. This guide is inspired from [this](https://https://www.maketecheasier.com/how-to-turn-raspberry-pi-into-wireless-access-point/) blog post
 
-Setup commands can be found in "router.txt"
+Setup commands can be found in "routing.txt"
 
 ## Setup (RPi #2)
 

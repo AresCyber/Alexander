@@ -1,0 +1,5 @@
+py-august
+twilio
+pyttsx3
+SpeechRecognition
+PyAudio

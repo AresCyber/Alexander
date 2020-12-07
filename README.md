@@ -53,10 +53,10 @@ Setup commands can be found in "router.txt"
 4. Train the algorithm. Simply run `python3 1_trainer.py`. That's it! That's all you need to train the model. 
 5. Set custom voice passwords on lines 18,21,24, and 35. 
 6. Create an August account and use "augusttest.py" 
-    a. enter email and password into the `email@email.com` and `password` fields
-    b. an email with a verification code will be sent. 
-    c. uncomment line 16 and proceed to enter code in the parenthesis. A new cached credentials file should have been created
-    d. enter email and password into the "augustlock.py" file
+    1. enter email and password into the `email@email.com` and `password` fields
+    1. an email with a verification code will be sent. 
+    1. uncomment line 16 and proceed to enter code in the parenthesis. A new cached credentials file should have been created
+    1. enter email and password into the "augustlock.py" file
 7. Create a twilio account and acquire a free api key. In mms.py enter your account sid, api key, and target phone number for notifications. 
 
 8. Configure IP tables to block all incoming traffic. A template is provided for blocking it all or allowing SSH and VNC. 

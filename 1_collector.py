@@ -1,3 +1,4 @@
+f##Facial recognition system modified from https://maker.pro/raspberry-pi/projects/how-to-create-a-facial-recognition-door-lock-with-raspberry-pi
 import cv2
 from picamera.array import PiRGBArray
 from picamera import PiCamera

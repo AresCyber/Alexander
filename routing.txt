@@ -17,7 +17,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables
 
 sudo nano /etc/dhcpcd.conf
 interface wlan0
-    static ip_address=192.168.4.1/24
+    static ip_address=192.168.4.1/29
     nohook wpa_supplicant
 
 sudo nano /etc/sysctl.d/routed-ap.conf
@@ -29,13 +29,15 @@ sudo netfilter-persistent save
 
 sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
 sudo nano /etc/dnsmasq.conf
+#paste this into the editor
 interface=wlan0
-dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
+dhcp-range=192.168.4.2,192.168.4.16,255.255.255.0,24h
 domain=wlan
 address=/gw.wlan/192.168.4.1
 
 
 sudo nano /etc/hostapd/hostapd.conf
+#paste this into the editor
 interface=wlan0
 ssid=Ares
 hw_mode=g
@@ -52,21 +54,8 @@ rsn_pairwise=CCMP
 troubleshooting: 
 sudo rfkill unblock wlan
 
+#interesting RPi admin utility
 install webadmin: 
 wget https://prdownloads.sourceforge.net/webadmin/webmin-1.941.tar.gz
 tar -zxvf webmin-1.941.tar.gz cd webmin-1.941
 sudo ./setup.sh /usr/local/webmin
-
-
-bridge utils: 
-
-sudo apt-get install bridge-utils
-sudo brctl addbr br0
-
-sudo brctl addif br0 eth0
-
-sudo nano /etc/network/interfaces
-
-auto br0
-iface br0 inet manual
-bridge_ports eth0 wlan0

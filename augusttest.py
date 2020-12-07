@@ -11,8 +11,8 @@ authentication = authenticator.authenticate()
 
 # State can be either REQUIRES_VALIDATION, BAD_PASSWORD or AUTHENTICATED
 # You'll need to call different methods to finish authentication process, see below
-##state = authentication.state
-
+state = authentication.state
+print(state)
 #authenticator.send_verification_code()
 # Wait for your code and pass it in to validate_verification_code()
 #validation_result = authenticator.validate_verification_code(105726)
@@ -23,7 +23,6 @@ authentication = authenticator.authenticate()
 # Once you have authenticated and validated you can use the access token to make API calls
 locks = api.get_locks(authentication.access_token)
 
-
 print(locks)
 
-self.api.get_lock_status(self.access_token, self.id)
+#self.api.get_lock_status(self.access_token, self.id)

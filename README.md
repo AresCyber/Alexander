@@ -69,3 +69,6 @@ Setup commands can be found in "router.txt"
     -`sudo iptables -A INPUT -i wlan0 -j DROP`
     -`sudo iptables save`
 
+## Running the program
+
+Everything should be set to go! Make sure your smart lock and RPi2 is connected to your wifi network being broadcast from RPi2. Run the program `python3 main.py`
